@@ -7,7 +7,7 @@
     "cli": "tsx src/main.ts",
     "build": "tsc --noEmit",
     "test": "tsx --test test/*.test.ts",
-    "check": "npm run build && npm test"
+    "check": "tsc --noEmit && tsx --test test/*.test.ts"
   },
   "dependencies": { "sax": "1.4.3" },
   "devDependencies": { "@types/node": "^24.0.0", "@types/sax": "^1.2.7", "tsx": "^4.20.0", "typescript": "^5.9.0" },

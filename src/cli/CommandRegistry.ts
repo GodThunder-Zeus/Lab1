@@ -19,27 +19,28 @@ import { UndoCommand } from '../application/commands/UndoCommand.ts';
 import { RedoCommand } from '../application/commands/RedoCommand.ts';
 import { HelpCommand } from '../application/commands/HelpCommand.ts';
 export class CommandRegistry {
-  // Phase 1 name dispatch point; registration will move into providers in Phase 2.
-  private readonly commands=new Map<string,new(args:string[])=>Command>([
-    ['init',InitCommand],
-    ['read',ReadCommand],
-    ['save',SaveCommand],
-    ['canvas',CanvasCommand],
-    ['create',CreateCommand],
-    ['delete',DeleteCommand],
-    ['move',MoveCommand],
-    ['scale',ScaleCommand],
-    ['set',SetCommand],
-    ['group',GroupCommand],
-    ['ungroup',UngroupCommand],
-    ['addto',AddtoCommand],
-    ['front',FrontCommand],
-    ['back',BackCommand],
-    ['tree',TreeCommand],
-    ['show',ShowCommand],
-    ['undo',UndoCommand],
-    ['redo',RedoCommand],
-    ['help',HelpCommand]
-  ]);
-  create(tokens:string[]):Command {const ctor=this.commands.get(tokens[0]);if(!ctor)throw new Error('unknown command: '+tokens[0]);return new ctor(tokens.slice(1));}
+    // Phase 1 name dispatch point; registration will move into providers in Phase 2.
+    private readonly commands = new Map<string, new (args: string[]) => Command>([
+        ['init', InitCommand],
+        ['read', ReadCommand],
+        ['save', SaveCommand],
+        ['canvas', CanvasCommand],
+        ['create', CreateCommand],
+        ['delete', DeleteCommand],
+        ['move', MoveCommand],
+        ['scale', ScaleCommand],
+        ['set', SetCommand],
+        ['group', GroupCommand],
+        ['ungroup', UngroupCommand],
+        ['addto', AddtoCommand],
+        ['front', FrontCommand],
+        ['back', BackCommand],
+        ['tree', TreeCommand],
+        ['show', ShowCommand],
+        ['undo', UndoCommand],
+        ['redo', RedoCommand],
+        ['help', HelpCommand]
+    ]);
+    create(tokens: string[]): Command { const ctor = this.commands.get(tokens[0]); if (!ctor)
+        throw new Error('unknown command: ' + tokens[0]); return new ctor(tokens.slice(1)); }
 }
