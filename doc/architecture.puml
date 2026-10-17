@@ -1,0 +1,26 @@
+@startuml
+title Lab1 Phase 1 — 模块依赖
+skinparam componentStyle rectangle
+component "main.ts\n组合根" as main
+package "cli" {
+  component "Repl / Tokenizer / CommandRegistry" as cli
+}
+package "application" {
+  component "Command / concrete commands\nSession / History / TreeFormatter" as app
+  interface "DocumentStore" as store
+}
+package "domain" {
+  component "Document / ShapeFactory\nShape / Group / Rect / Circle / Ellipse / Line / Text" as domain
+}
+package "infrastructure" {
+  component "FileDocumentStore / SvgCodec" as infra
+}
+main --> cli
+main --> app
+main --> infra
+cli --> app
+app --> domain
+app --> store
+infra ..|> store
+infra --> domain
+@enduml

@@ -1,0 +1,57 @@
+✓ Lockfile passes supply-chain policies (verified 8m ago)
+Lockfile is up to date, resolution step is skipped
+Already up to date
+
+.../esbuild@0.28.2/node_modules/esbuild postinstall$ node install.js
+.../esbuild@0.28.2/node_modules/esbuild postinstall: Done
+Done in 865ms using pnpm v11.25.0
+✔ domain and application obey inward dependency rules; one class per file (8.7464ms)
+✔ no document guards and help remains accessible (2.0472ms)
+✔ all six shapes, quotes, comments, omitted styles and case-sensitive ids (1.4101ms)
+✔ container move and scale recurse through nested geometry (0.9846ms)
+✔ set style on group and text content on text; reject invalid attributes (0.296ms)
+✔ group preserves document order rather than argument order, undo is atomic (0.6683ms)
+✔ group from different parents uses root and preserves traversal order (0.282ms)
+✔ ungroup nested group splices children at original position (0.3098ms)
+✔ addto and z-order only affect appropriate sibling list (0.4029ms)
+✔ deleting a subtree restores same parent and sibling position on undo (0.4275ms)
+✔ new edit after undo clears redo; displays do not enter history (0.4527ms)
+✔ init is a history barrier (0.2312ms)
+✔ canvas 500 400 is a history barrier (0.2127ms)
+✔ save a.svg is a history barrier (0.3739ms)
+✔ read a.svg is a history barrier (1.9218ms)
+✔ canvas query preserves undo and redo (0.2308ms)
+✔ atomic failure: create rect r 0 0 1 1 (0.3998ms)
+✔ atomic failure: move missing 1 2 (0.2799ms)
+✔ atomic failure: create circle c 1 2 3 in missing (0.3168ms)
+✔ atomic failure: create circle c 1 2 3 in r (0.3185ms)
+✔ atomic failure: create box n 1 2 3 4 "hi" (0.2521ms)
+✔ atomic failure: group bad r a (0.505ms)
+✔ atomic failure: addto b a (0.274ms)
+✔ atomic failure: scale a 0 (0.2599ms)
+✔ atomic failure: scale a -1 (1.102ms)
+✔ atomic failure: set r width -2 (0.2432ms)
+✔ atomic failure: move r NaN 2 (0.1962ms)
+✔ atomic failure: set r unknown 2 (0.1692ms)
+✔ atomic failure: read missing.svg (0.1554ms)
+✔ atomic failure: save denied.svg (0.1515ms)
+✔ atomic failure: create text t 0 0 "bad (0.1675ms)
+✔ overflow in later child of composite rolls back earlier changes (0.3079ms)
+✔ external missing IDs reserve all explicit IDs first (0.5085ms)
+✔ save/read round trip retains hierarchy, text, styles, geometry and order (1.1627ms)
+✔ invalid or unsupported SVG is transactional: <svg><g id="a"/><rect id="a"/></svg> (0.2476ms)
+✔ invalid or unsupported SVG is transactional: <svg><g></svg> (0.1978ms)
+✔ invalid or unsupported SVG is transactional: <svg><path id="p"/></svg> (0.2012ms)
+✔ invalid or unsupported SVG is transactional: <!DOCTYPE svg><svg/> (0.1483ms)
+✔ invalid or unsupported SVG is transactional: <svg viewBox="10 10 20 20"/> (0.1468ms)
+✔ invalid or unsupported SVG is transactional: <svg><rect id="r" transform="rotate(30)"/></svg> (0.1702ms)
+✔ file adapter writes standard SVG, reads it back and handles missing files (5.8896ms)
+✔ codec rejects empty or non-SVG input (0.2368ms)
+ℹ tests 42
+ℹ suites 0
+ℹ pass 42
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 470.2172
